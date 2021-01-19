@@ -5,6 +5,9 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 const myVideo = document.createElement('video');
+
+
+
 myVideo.muted = true;
 
 var peer = new Peer(undefined,{
@@ -68,3 +71,21 @@ const addVideoStream = (video, stream) => {
 
         videoGrid.append(video)
 }
+
+
+const text = document.getElementById('chat_message')
+
+// const getHtml = document.documentElement.innerHTML;
+
+text.addEventListener("keyup", (e) => {
+    if (e.key === "Enter" && text.length !== 0) {
+        console.log(text.value)
+        socket.emit('message', text.value);
+        
+    }
+});
+
+
+socket.on('createMessage', message => {
+    console.log('this is from server', message)
+})
