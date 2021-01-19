@@ -1,18 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
 
-* {
-    margin: 0;
+.fa {
+    font-size: 40px;
 }
 
 #video-grid {
-
-    display: flex;
-    justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
-
 
 video {
-    height: 300px;
-    width: 400px;
-    object-fit: cover;
+  height: 300px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 10px;
 }
+
+.main {
+    height: 100vh;
+    display: flex;
+    
+
+    
+}
+
+.main__left {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.main__right {
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.main__videos {
+    flex-grow: 1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.main__controls {
+    margin: 30px;
+    background-color: #f0f4f9;
+    color: rgb(99, 99, 99);
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 10px;
+    height: 140px;
+}
+
+
+
+
+.main__controls__block  {
+    display: flex;
+    
+   
+}
+
+.main__controls__button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 10px;
+        min-width: 80px;
+        cursor: pointer;
+}
+
+.main__controls__button > .fas {
+    font-size: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 999px;
+    box-shadow: 0px 4px 13px 0px #c5c5c5;
+}
+
+.main__controls__button > span {
+    margin-top: 20px;
+    font-size: small;
+}
+
