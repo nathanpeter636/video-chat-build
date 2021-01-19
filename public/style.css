@@ -122,11 +122,6 @@ video {
     
 }
 
-.messages{
-    color: white;
-    list-style: none;
-}
-
 .main__message_container {
     padding: 22px 12px;
     display: flex;
@@ -146,6 +141,16 @@ video {
 
 input:focus, textarea:focus, select:focus{
     outline: none;
+}
+span {
+    font-weight: bold;
+    color: black;
+}
+
+.messages {
+    color: rgb(99, 99, 99);
+    list-style: none;
+    padding-left: 20px;
 }
 
 

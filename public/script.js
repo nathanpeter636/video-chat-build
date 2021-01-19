@@ -42,6 +42,33 @@ navigator.mediaDevices.getUserMedia({
     socket.on('user-connected', (userId) => {
         connectToNewUser(userId, stream)
     })
+
+
+    //adding user messages
+
+    const chat = document.querySelector('.messages')
+
+    
+
+socket.on('createMessage', message => {
+
+    console.log(message)
+
+
+    let li = document.createElement('li')
+    let span = document.createElement('span')
+   
+    
+span.appendChild(document.createTextNode('user'))
+  li.appendChild(document.createTextNode(message))
+
+  chat.appendChild(span);
+   chat.appendChild(li);
+
+  
+  
+   
+})
 })
 
 
@@ -79,13 +106,11 @@ const text = document.getElementById('chat_message')
 
 text.addEventListener("keyup", (e) => {
     if (e.key === "Enter" && text.length !== 0) {
-        console.log(text.value)
+       
         socket.emit('message', text.value);
+
         
     }
 });
 
 
-socket.on('createMessage', message => {
-    console.log('this is from server', message)
-})
