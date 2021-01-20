@@ -179,6 +179,27 @@ const muteUnmute = () => {
     document.querySelector('.main__video_button').innerHTML = html;
   }
 
+ // hide/show chat window
+
+
+ 
+ const hideChat = () => {
+  document.querySelector('.main__right').style.display = "none"
+
+  document.querySelector('.main__left').classList.add('flex_one')
+
+  document.querySelector('.main__controls').style.marginRight = "10px";
+
+ }
+
+ const showChat = () => {
+
+  document.querySelector('.main__right').style.display = "flex"
+
+  document.querySelector('.main__left').classList.remove('flex_one')
+
+ }
+
 
 //modal 
 
@@ -209,5 +230,6 @@ function outsideClick(e) {
     modal.style.display = 'none';
   }
 }
+
 
 

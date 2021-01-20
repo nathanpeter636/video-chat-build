@@ -24,7 +24,7 @@
   }
   
   .modal__content {
-    margin: 10% auto;
+    margin: 20% auto;
     width: 60%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
    
@@ -79,8 +79,8 @@
 .button__options {
 
     text-align: center;
-    width: 100px;
-    height: 30px;
+    width: 160px;
+    height: 40px;
     background-color: cornflowerblue;
     color: white;
     

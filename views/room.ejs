@@ -29,7 +29,9 @@
         <div class="main__videos">
           <div id="video-grid">
 
-
+      <video></video>
+      <video></video>
+      <video></video>
 
 
           </div>
@@ -61,12 +63,12 @@
           </div>
 
           <div class="main__controls__block">
-            <div class="main__controls__button">
+            <div onclick="showChat()"class="main__controls__button">
               <i class="fas fa-comment-alt"></i>
               <span>Chat</span>
             </div>
-            <div id="modal-btn" class="main__controls__button">
-              <i class="fas fa-sign-out-alt" style="color: red"></i>
+            <div id="modal-btn" class="main__controls__button leaveBtn">
+              <i class="fas fa-sign-out-alt " style="color: red"></i>
 
               <span class="leave_meeting">Leave Chat</span>
             </div>
@@ -76,6 +78,8 @@
 
       <div class="main__right">
         <div class="main__header">
+
+          <div onclick="hideChat()" class="chat_close"><i class="fas fa-times-circle"></i></div>
           <h2>Chat</h2>
         </div>
         <div class="main__chat_window">
