@@ -13,17 +13,16 @@ const { v4: uuidv4 } = require("uuid");
 
 //https://peerjs.com/
 
-const { ExpressPeerServer} = require('peer');
+const { ExpressPeerServer } = require("peer");
 
 const peerServer = ExpressPeerServer(server, {
-    debug: true
-})
+  debug: true,
+});
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-
-app.use('/peerjs', peerServer);
+app.use("/peerjs", peerServer);
 
 app.get("/", (req, res) => {
   res.redirect(`/${uuidv4()}`);
@@ -40,9 +39,9 @@ io.on("connection", (socket) => {
     socket.join(roomId);
     socket.to(roomId).broadcast.emit("user-connected", userId);
 
-    socket.on('message', message => {
-      io.to(roomId).emit('createMessage', message)
-    })
+    socket.on("message", (message) => {
+      io.to(roomId).emit("createMessage", message);
+    });
   });
 });
 

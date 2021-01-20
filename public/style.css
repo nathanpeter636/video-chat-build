@@ -9,15 +9,22 @@ body {
 }
 
 #video-grid {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 0.9;
+    overflow: hidden;
+  
 }
+
 
 video {
   height: 300px;
   width: 400px;
   object-fit: cover;
   border-radius: 10px;
+  margin: 5px;
+  box-shadow: 0px 4px 13px 0px #c5c5c5;
 }
 
 .main {
@@ -41,6 +48,7 @@ video {
     flex-direction: column;
     background-color: #f0f4f9;
     border-radius: 10px;
+    
     margin: 20px;
 }
 
@@ -51,10 +59,12 @@ video {
     justify-content: center;
     align-items: center;
     padding: 40px;
+    
 }
 
 .main__controls {
-    margin: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
     background-color: #f0f4f9;
     color: rgb(99, 99, 99);
     display: flex;
@@ -122,6 +132,14 @@ video {
     
 }
 
+.main__chat_window > ul > li {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    font-size: small;
+}
+
 .main__message_container {
     padding: 22px 12px;
     display: flex;
@@ -142,7 +160,7 @@ video {
 input:focus, textarea:focus, select:focus{
     outline: none;
 }
-span {
+.main__chat_window > ul > span {
     font-weight: bold;
     color: black;
 }
@@ -151,6 +169,14 @@ span {
     color: rgb(99, 99, 99);
     list-style: none;
     padding-left: 20px;
+}
+
+.unmute {
+    color: red;
+}
+
+.stop {
+    color: red;
 }
 
 
