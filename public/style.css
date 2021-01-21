@@ -57,27 +57,7 @@ video {
     margin: 20px;
 }
 
-@media (max-width: 788px) {
-    
-    .main__right {
-        display: none;
-    }
 
-    .main__left {
-        flex: 1;
-    }
-    
-    video {
-        
-        height: 190px;
-        width: 80%;
-        display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    
-    }
-}
 
 
 .main__videos {
@@ -129,7 +109,9 @@ video {
 
 .main__controls__button:hover {
     transform: scale(1.13);
+    color: black;
 }
+
 
 .main__controls__button > .fas {
     font-size: 20px;
@@ -233,12 +215,37 @@ input:focus, textarea:focus, select:focus{
 
 }
 
+@media (max-width: 788px) {
+    
+    .main__right {
+        display: none;
+    }
+
+    .main__left {
+        flex: 1;
+    }
+    
+    video {
+        
+        height: 190px;
+        width: 70%;
+        display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    
+    }
+}
+
 
 
 @media (max-width: 388px) {
 
 
-    
+    .main {
+        overflow-x: hidden;
+
+    }
 
     .main__controls {
     
